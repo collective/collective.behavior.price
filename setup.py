@@ -31,6 +31,7 @@ setup(
         'hexagonit.testing',
         'plone.behavior',
         'plone.directives.form',
+        'py-moneyed',
         'rwproperty',
         'setuptools',
     ],
