@@ -1,0 +1,40 @@
+<configure
+  i18n_domain="collective.behavior.price"
+  xmlns:five="http://namespaces.zope.org/five"
+  xmlns:genericsetup="http://namespaces.zope.org/genericsetup"
+  xmlns:grok="http://namespaces.zope.org/grok"
+  xmlns:i18n="http://namespaces.zope.org/i18n"
+  xmlns:plone="http://namespaces.plone.org/plone"
+  xmlns="http://namespaces.zope.org/zope"
+  >
+
+  <includeDependencies package="." />
+  <five:registerPackage package="." initialize=".initialize" />
+  <grok:grok package="." />
+  <i18n:registerTranslations directory="locales" />
+
+
+  <genericsetup:registerProfile
+    description="Installs the collective.behavior.price package"
+    directory="profiles/default"
+    name="default"
+    provides="Products.GenericSetup.interfaces.EXTENSION"
+    title="collective.behavior.price"
+    />
+
+  <genericsetup:registerProfile
+    description="Uninstalls the collective.behavior.price package"
+    directory="profiles/uninstall"
+    name="uninstall"
+    provides="Products.GenericSetup.interfaces.EXTENSION"
+    title="Uninstall collective.behavior.price"
+    />
+
+  <plone:behavior
+    description="Adds price field."
+    factory=".behavior.Price"
+    provides=".interfaces.IPrice"
+    title="Price"
+    />
+
+</configure>
