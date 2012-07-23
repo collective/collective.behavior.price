@@ -12,6 +12,10 @@ class TestSetup(IntegrationTestCase):
         self.failUnless(
             installer.isProductInstalled('collective.behavior.price'))
 
+    def test_catalog__money(self):
+        catalog = getToolByName(self.portal, 'portal_catalog')
+        self.assertIn('money', catalog.schema())
+
     def test_metadata__version(self):
         setup = getToolByName(self.portal, 'portal_setup')
         self.assertEqual(
