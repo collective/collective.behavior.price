@@ -22,7 +22,7 @@ The behavior can be added through the web or directly through the file system to
 
 You may also set currency through content registry and content price with currency will be also cataloged with metadata called ``money``.
 
-Further Documentation URL
+Farther Documentation URL
 -------------------------
 
 `http://packages.python.org/collective.behavior.price/
