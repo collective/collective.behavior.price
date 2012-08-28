@@ -1,13 +1,26 @@
-======================
+=========================
 collective.behavior.price
-======================
+=========================
 
-collective.behavior.price provides bahavior to dexterity content types related to prices.
+collective.behavior.price provides price related behavior to dexterity content types.
 
-Tested with
------------
+Currently Tested with
+---------------------
 
 * Plone-4.2.1 [taito]
+
+Behavior
+--------
+
+The behavior can be added through the web or directly through the file system to the dexterity content type xml file like::
+
+  <property name="behaviors">
+    ...
+    <element value="collective.behavior.price.interfaces.IPrice" />
+    ...
+  </property>
+
+You may also set currency through content registry and content price with currency will be also cataloged with metadata called ``money``.
 
 Further Documentation URL
 -------------------------
