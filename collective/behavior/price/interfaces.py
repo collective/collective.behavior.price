@@ -13,8 +13,7 @@ class IPrice(form.Schema):
 
     price = Decimal(
             title=_(u"Price"),
-            required=True,
-    )
+            required=True)
 
     currency = Attribute('Currency like EUR')
     money = Attribute('Money instance')
@@ -31,5 +30,4 @@ class ICurrency(Interface):
         description=_(u'Default Currency for price field.'),
         required=True,
         values=currencies,
-        default='EUR',
-    )
+        default='EUR')

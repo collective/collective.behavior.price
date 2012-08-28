@@ -4,15 +4,9 @@ from decimal import Decimal
 from moneyed import Money
 from plone.directives import form
 from plone.registry.interfaces import IRegistry
-from rwproperty import getproperty
-from rwproperty import setproperty
 from zope.component import getUtility
 from zope.interface import alsoProvides
 from zope.interface import implements
-
-import logging
-
-logger = logging.getLogger(__name__)
 
 
 alsoProvides(IPrice, form.IFormFieldProvider)
@@ -26,7 +20,7 @@ class Price(object):
     def __init__(self, context):
         self.context = context
 
-    @getproperty
+    @property
     def price(self):
         return getattr(self.context, 'price', None)
 
@@ -50,7 +44,7 @@ class Price(object):
         else:
             raise ValueError('Not Decimal.')
 
-    @setproperty
+    @price.setter
     def price(self, value):
         """Setting price as Decimal and money as Money.
 
@@ -64,7 +58,7 @@ class Price(object):
         registry = getUtility(IRegistry)
         return registry.forInterface(ICurrency).default_currency
 
-    @getproperty
+    @property
     def money(self):
         return getattr(self.context, 'money', None)
 
@@ -83,7 +77,7 @@ class Price(object):
         else:
             raise ValueError('Not Money.')
 
-    @setproperty
+    @money.setter
     def money(self, value):
         """Setting money as Money.
 
