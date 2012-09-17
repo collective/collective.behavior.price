@@ -39,7 +39,8 @@ setup(
         'plone.behavior',
         'plone.directives.form',
         'py-moneyed',
-        'setuptools'],
+        'setuptools',
+        'zope.i18nmessageid'],
     entry_points="""
     # -*- Entry points: -*-
 
