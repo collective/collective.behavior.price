@@ -33,16 +33,17 @@ class Price(object):
         :param name: Name of field.
         :type name: str
         """
-        if isinstance(value, Decimal):
-            # Set price
-            price_name = '{}price'.format(name)
-            setattr(self.context, price_name, value)
-            # Set money
-            money_name = '{}money'.format(name)
-            setattr(
-                self.context, money_name, Money(value, currency=self.currency))
-        else:
-            raise ValueError('Not Decimal.')
+        if value is not None:
+            if isinstance(value, Decimal):
+                # Set price
+                price_name = '{}price'.format(name)
+                setattr(self.context, price_name, value)
+                # Set money
+                money_name = '{}money'.format(name)
+                setattr(
+                    self.context, money_name, Money(value, currency=self.currency))
+            else:
+                raise ValueError('Not Decimal.')
 
     @price.setter
     def price(self, value):

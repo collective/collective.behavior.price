@@ -44,6 +44,13 @@ class TestPrice(unittest.TestCase):
         instance = self.create_instance(context=context)
         self.assertEqual(instance.price, price)
 
+    def test_instance__set_price__None(self):
+        context = mock.Mock()
+        price = context.price
+        instance = self.create_instance(context=context)
+        instance._set_price(None)
+        self.assertEqual(instance.price, price)
+
     def set_price(self, instance, price):
         """Setting price to instance."""
         instance.price = price
