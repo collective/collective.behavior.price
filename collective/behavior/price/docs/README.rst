@@ -7,7 +7,7 @@ collective.behavior.price provides price related behavior to dexterity content t
 Currently Tested with
 ---------------------
 
-* Plone-4.2.1 [taito]
+* Plone-4.2.2 [taito]
 
 Behavior
 --------
