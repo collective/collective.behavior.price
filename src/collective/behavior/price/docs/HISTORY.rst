@@ -1,6 +1,13 @@
 Changelog
 ---------
 
+0.3 (2013-02-07)
+================
+
+- Added column: price to catalog metadata. [taito]
+- Tested with Plone-4.2.4. [taito]
+- Integrated to Travis CI. [taito]
+
 0.2.1 (2012-11-04)
 ==================
 

@@ -35,4 +35,6 @@
     title="Price"
     />
 
+  <include file="upgrades.zcml"/>
+
 </configure>

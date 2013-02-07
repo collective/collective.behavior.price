@@ -16,11 +16,15 @@ class TestSetup(IntegrationTestCase):
         catalog = getToolByName(self.portal, 'portal_catalog')
         self.assertIn('money', catalog.schema())
 
+    def test_catalog__price(self):
+        catalog = getToolByName(self.portal, 'portal_catalog')
+        self.assertIn('price', catalog.schema())
+
     def test_metadata__version(self):
         setup = getToolByName(self.portal, 'portal_setup')
         self.assertEqual(
             setup.getVersionForProfile(
-                'profile-collective.behavior.price:default'), u'0')
+                'profile-collective.behavior.price:default'), u'1')
 
     def test_uninstall__package(self):
         installer = getToolByName(self.portal, 'portal_quickinstaller')

@@ -1,0 +1,16 @@
+<configure
+  i18n_domain="collective.behavior.price"
+  xmlns:genericsetup="http://namespaces.zope.org/genericsetup"
+  xmlns="http://namespaces.zope.org/zope">
+
+  <genericsetup:upgradeStep
+    description="Add price column to metadata."
+    destination="1"
+    handler="collective.behavior.price.upgrades.reimport_catalog"
+    profile="collective.behavior.price:default"
+    sortkey="1"
+    source="0"
+    title="Reimport catalog"
+    />
+
+</configure>
