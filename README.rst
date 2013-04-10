@@ -20,4 +20,4 @@ The behavior can be added through the web or directly through the file system to
     ...
   </property>
 
-You may also set currency through content registry and content price with currency will be also cataloged with metadata called ``money``.
+You may also set currency through content registry and price with currency will be also cataloged with metadata: ``money``.
