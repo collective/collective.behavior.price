@@ -35,11 +35,14 @@ setup(
     zip_safe=False,
     install_requires=[
         'five.grok',
-        'hexagonit.testing',
+        # 'hexagonit.testing',
         'plone.behavior',
         'plone.directives.form',
         'py-moneyed',
         'setuptools'],
+    extras_require = {
+        'test': ['hexagonit.testing']
+    },
     entry_points="""
     # -*- Entry points: -*-
 
