@@ -5,10 +5,8 @@ import os
 
 
 long_description = (
-    open(os.path.join("src", "collective", "behavior", "price", "docs", "README.rst")).read() + "\n" +
-    open(os.path.join("src", "collective", "behavior", "price", "docs", "INSTALL.rst")).read() + "\n" +
+    open(os.path.join("README.rst")).read() + "\n" +
     open(os.path.join("src", "collective", "behavior", "price", "docs", "HISTORY.rst")).read() + "\n" +
-    open(os.path.join("src", "collective", "behavior", "price", "docs", "CONTRIBUTORS.rst")).read() + "\n" +
     open(os.path.join("src", "collective", "behavior", "price", "docs", "CREDITS.rst")).read())
 
 
@@ -35,13 +33,12 @@ setup(
     zip_safe=False,
     install_requires=[
         'five.grok',
-        # 'hexagonit.testing',
         'plone.behavior',
         'plone.directives.form',
         'py-moneyed',
         'setuptools'],
     extras_require = {
-        'test': ['hexagonit.testing']
+        'test': ['mock', 'plone.app.testing']
     },
     entry_points="""
     # -*- Entry points: -*-
