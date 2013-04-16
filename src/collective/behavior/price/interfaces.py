@@ -3,9 +3,10 @@ from moneyed.classes import CURRENCIES
 from zope import schema
 from zope.interface import Attribute
 from zope.interface import Interface
+from plone.supermodel.model import Schema
 
 
-class IPrice(Interface):
+class IPrice(Schema):
     """Add salable field to dexterity type.
     """
 
