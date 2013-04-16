@@ -12,7 +12,7 @@ long_description = (
 
 setup(
     name='collective.behavior.price',
-    version='0.3.1',
+    version='0.3.1.1',
     description="Behavior to make content pricing.",
     long_description=long_description,
     classifiers=[
