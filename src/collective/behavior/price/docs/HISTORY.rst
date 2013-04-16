@@ -1,6 +1,12 @@
 Changelog
 ---------
 
+0.3.1.1 (2013-04-16)
+====================
+
+- Removed dependency to five.grok. [taito]
+- Tested with Plone-4.3. [taito]
+
 0.3.1 (2013-04-10)
 ==================
 

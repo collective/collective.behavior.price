@@ -2,19 +2,19 @@ from collective.behavior.price.interfaces import ICurrency
 from collective.behavior.price.interfaces import IPrice
 from decimal import Decimal
 from moneyed import Money
-from plone.directives import form
+from plone.autoform.interfaces import IFormFieldProvider
 from plone.registry.interfaces import IRegistry
 from zope.component import getUtility
 from zope.interface import alsoProvides
 from zope.interface import implements
 
 
-alsoProvides(IPrice, form.IFormFieldProvider)
+alsoProvides(IPrice, IFormFieldProvider)
 
 
 class Price(object):
-    """
-    """
+    """Behavior to price content types"""
+
     implements(IPrice)
 
     def __init__(self, context):

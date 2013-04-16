@@ -4,12 +4,12 @@ import unittest
 class TestIPrice(unittest.TestCase):
 
     def test_subclass(self):
-        from plone.directives.form import Schema
+        from zope.interface import Interface
         from collective.behavior.price.behavior import IPrice
-        self.assertTrue(issubclass(IPrice, Schema))
+        self.assertTrue(issubclass(IPrice, Interface))
 
     def test_alsoProvides(self):
-        from plone.directives.form import IFormFieldProvider
+        from plone.autoform.interfaces import IFormFieldProvider
         from collective.behavior.price.behavior import IPrice
         self.assertTrue(IFormFieldProvider.providedBy(IPrice))
 
