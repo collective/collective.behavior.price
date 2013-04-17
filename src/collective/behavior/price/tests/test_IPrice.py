@@ -51,4 +51,4 @@ class TestIPrice(unittest.TestCase):
 
     def test_money__doc(self):
         schema = self.get_schema('money')
-        self.assertEqual(schema.getDoc(), 'Money instance')
+        self.assertEqual(schema.getDoc(), 'Instance: moneyed.Money')

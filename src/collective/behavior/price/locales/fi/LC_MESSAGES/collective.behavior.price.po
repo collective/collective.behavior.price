@@ -20,7 +20,7 @@ msgstr "Oletus valuutta"
 
 #: ./interfaces.py:30
 msgid "Default Currency for price field."
-msgstr "Oletus valutta hintakentälle"
+msgstr "Oletus valuutta hintakentälle."
 
 #: ./interfaces.py:15
 msgid "Price"

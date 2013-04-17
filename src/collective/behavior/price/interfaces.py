@@ -1,21 +1,16 @@
 from collective.behavior.price import _
+from collective.behavior.price.schema import PriceSchema
 from moneyed.classes import CURRENCIES
 from zope import schema
 from zope.interface import Attribute
 from zope.interface import Interface
-from plone.supermodel.model import Schema
 
 
-class IPrice(Schema):
-    """Add salable field to dexterity type.
-    """
-
-    price = schema.Decimal(
-        title=_(u"Price"),
-        required=True)
+class IPrice(PriceSchema):
+    """Interface for behaviro: Price"""
 
     currency = Attribute('Currency like EUR')
-    money = Attribute('Money instance')
+    money = Attribute('Instance: moneyed.Money')
 
 
 currencies = CURRENCIES.keys()

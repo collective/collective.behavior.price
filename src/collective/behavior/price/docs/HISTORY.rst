@@ -1,6 +1,11 @@
 Changelog
 ---------
 
+0.3.1.3 (2013-04-17)
+====================
+
+- Separated schema from attributes and methods. [taito]
+
 0.3.1.2 (2013-04-16)
 ====================
 
