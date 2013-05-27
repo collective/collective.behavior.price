@@ -99,8 +99,18 @@ class TestPrice(unittest.TestCase):
 
     def test_instance__money__set(self):
         instance = self.create_instance()
-        from moneyed import Money
         from decimal import Decimal
+        from moneyed import Money
         money = Money(Decimal('5.00'), currency="EUR")
         instance.money = money
         self.assertEqual(instance.money, money)
+
+    @mock.patch('collective.behavior.price.behavior.Price.currency', mock.PropertyMock(return_value='EUR'))
+    def test__get_money(self):
+        from decimal import Decimal
+        from moneyed import Money
+        instance = self.create_instance()
+        instance.context.money = None
+        price = Decimal('5.00')
+        instance.context.price = price
+        self.assertEqual(instance._get_money(), Money(price, currency='EUR'))

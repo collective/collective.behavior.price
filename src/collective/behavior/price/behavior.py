@@ -59,9 +59,24 @@ class Price(object):
         registry = getUtility(IRegistry)
         return registry.forInterface(ICurrency).default_currency
 
+    def _get_money(self, name=''):
+        """Returns money
+
+        :param name: Attribute name infront of money
+        :type name: str
+        """
+        money_name = '{}money'.format(name)
+        money = getattr(self.context, money_name, None)
+        if money is None:
+            price_name = '{}price'.format(name)
+            price = getattr(self.context, price_name, None)
+            if price is not None:
+                money = Money(price, currency=self.currency)
+        return money
+
     @property
     def money(self):
-        return getattr(self.context, 'money', None)
+        return self._get_money()
 
     def _set_money(self, value, name=''):
         """Setting money as Money.
