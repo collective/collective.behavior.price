@@ -1,26 +1,13 @@
 Changelog
 ---------
 
-0.3.1.4 (2013-05-27)
-====================
+0.4 (2013-10-28)
+================
 
 - Added helper method to get money. [taito]
-
-0.3.1.3 (2013-04-17)
-====================
-
 - Separated schema from attributes and methods. [taito]
-
-0.3.1.2 (2013-04-16)
-====================
-
-- Updated imports. [taito]
-
-0.3.1.1 (2013-04-16)
-====================
-
 - Removed dependency to five.grok. [taito]
-- Tested with Plone-4.3. [taito]
+- Tested with Plone-4.3.2. [taito]
 
 0.3.1 (2013-04-10)
 ==================
