@@ -4,10 +4,13 @@ collective.behavior.price
 
 collective.behavior.price provides price related behavior to dexterity content types.
 
+.. image:: https://secure.travis-ci.org/collective/collective.behavior.price.png
+    :target: http://travis-ci.org/collective/collective.behavior.price
+
 Currently tested with
 ---------------------
 
-* Plone-4.3.2 with Python-2.7.x [taito]
+* Plone-4.3.6 with Python-2.7.x [taito]
 
 Behavior
 --------
