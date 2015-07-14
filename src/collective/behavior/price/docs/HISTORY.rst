@@ -1,6 +1,12 @@
 Changelog
 ---------
 
+0.4.2 (2015-07-14)
+==================
+
+- Migrate Travis CI to container-based. [taito]
+- Move Products.CMFPlacefulWorkflow dependency to test. [taito]
+
 0.4.1 (2015-06-25)
 ==================
 

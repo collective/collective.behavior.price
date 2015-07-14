@@ -15,6 +15,8 @@ class BehaviorPriceLayer(PloneSandboxLayer):
     def setUpZope(self, app, configurationContext):
         """Set up Zope."""
         # Load ZCML
+        import Products.CMFPlacefulWorkflow
+        self.loadZCML(package=Products.CMFPlacefulWorkflow)
         import collective.behavior.price
         self.loadZCML(package=collective.behavior.price)
         z2.installProduct(app, 'collective.behavior.price')
